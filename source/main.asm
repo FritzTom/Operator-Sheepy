@@ -46,7 +46,13 @@ dw 0xaa55
 ; keep in mind registers are weird xD
 
 
+mov ah, 0
+mov al, 0x13
+
+int 0x10
 
 
-
+mov ebx, 0xa0022
+mov ax, 0x0004
+mov [ebx], ax
 jmp $
