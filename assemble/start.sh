@@ -8,7 +8,7 @@ nasm -f bin source/main.asm -o binaries/main.bin
 cd binaries
 
 
-dd if=/dev/zero of=null.bin bs=1 count=512
+dd if=/dev/zero of=null.bin bs=512 count=20
 
 cat main.bin null.bin > disk.bin
 

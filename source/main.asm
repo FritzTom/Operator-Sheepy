@@ -41,11 +41,6 @@ dw 0xaa55
 ;
 
 
-; a character at b8000 looks like this: aaaabbbb cccccccc so 2 bytes
-; the first one is for colour a is for background colour b for foreground colour and c is a ascii code
-; keep in mind registers are weird xD
-
-
 mov ah, 0
 mov al, 0x13
 
