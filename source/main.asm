@@ -52,7 +52,19 @@ mov al, 0x13
 int 0x10
 
 
-mov ebx, 0xa0022
-mov ax, 0x0004
-mov [ebx], ax
+mov ebx, 0xa0000
+mov ah, 200
+row_loop:
+mov al, 0
+column_loop:
+mov [ebx], al
+inc ebx
+inc al
+cmp al, 0
+jne column_loop
+add ebx, 64
+dec ah
+cmp ah, 0
+jne row_loop
+
 jmp $
