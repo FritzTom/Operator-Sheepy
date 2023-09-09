@@ -1,7 +1,5 @@
 #!/bin/bash
 
-cd ..
-
 
 nasm -f bin source/main.asm -o binaries/main.bin
 
